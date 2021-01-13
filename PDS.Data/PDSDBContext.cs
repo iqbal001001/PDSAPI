@@ -1,5 +1,4 @@
-﻿using MySql.Data.Entity;
-using PDS.Domain;
+﻿using PDS.Domain;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace PDS.Data
 {
-    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class PDSDBContext : DbContext
     {
         public PDSDBContext() : base("name=PDSDBContext")
@@ -48,6 +46,10 @@ namespace PDS.Data
         {
             builder.Conventions.Remove<PluralizingTableNameConvention>();
 
+        //    builder.Entity<ProductSuite>()
+        //   .Property(b => b.Name).HasMaxLength(50);
+        //    builder.Entity<ProductVersion>()
+        //.Property(b => b.).HasMaxLength(50);
             // Primary keys
             builder.Entity<ProductSuite>()
                 .HasKey(q => q.Id)

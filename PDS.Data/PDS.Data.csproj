@@ -40,23 +40,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.6.10.9\lib\net452\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.Entity.6.10.9\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Drawing.Design" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Security" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,13 +51,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202012301445348_initial.cs" />
-    <Compile Include="Migrations\202012301445348_initial.designer.cs">
-      <DependentUpon>202012301445348_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202010160659328_Initial.cs" />
+    <Compile Include="Migrations\202010160659328_Initial.designer.cs">
+      <DependentUpon>202010160659328_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101011154574_uniqueId.cs" />
-    <Compile Include="Migrations\202101011154574_uniqueId.designer.cs">
-      <DependentUpon>202101011154574_uniqueId.cs</DependentUpon>
+    <Compile Include="Migrations\202010231318572_changeVersion.cs" />
+    <Compile Include="Migrations\202010231318572_changeVersion.designer.cs">
+      <DependentUpon>202010231318572_changeVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011030808530_ClinicalCategory.cs" />
+    <Compile Include="Migrations\202011030808530_ClinicalCategory.designer.cs">
+      <DependentUpon>202011030808530_ClinicalCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011181247278_cc_feature_is_optional.cs" />
+    <Compile Include="Migrations\202011181247278_cc_feature_is_optional.designer.cs">
+      <DependentUpon>202011181247278_cc_feature_is_optional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011210320596_WorkFlow.cs" />
+    <Compile Include="Migrations\202011210320596_WorkFlow.designer.cs">
+      <DependentUpon>202011210320596_WorkFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011231003000_WorkFlow_ObjId.cs" />
+    <Compile Include="Migrations\202011231003000_WorkFlow_ObjId.designer.cs">
+      <DependentUpon>202011231003000_WorkFlow_ObjId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011240841556_WorkFlow_ValidationToken.cs" />
+    <Compile Include="Migrations\202011240841556_WorkFlow_ValidationToken.designer.cs">
+      <DependentUpon>202011240841556_WorkFlow_ValidationToken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011251323108_WorkFlowItem_ParentId_ParentType.cs" />
+    <Compile Include="Migrations\202011251323108_WorkFlowItem_ParentId_ParentType.designer.cs">
+      <DependentUpon>202011251323108_WorkFlowItem_ParentId_ParentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101100520001_UniqueID.cs" />
+    <Compile Include="Migrations\202101100520001_UniqueID.designer.cs">
+      <DependentUpon>202101100520001_UniqueID.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RepositoryBase.cs" />
@@ -111,11 +125,32 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012301445348_initial.resx">
-      <DependentUpon>202012301445348_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010160659328_Initial.resx">
+      <DependentUpon>202010160659328_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101011154574_uniqueId.resx">
-      <DependentUpon>202101011154574_uniqueId.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010231318572_changeVersion.resx">
+      <DependentUpon>202010231318572_changeVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011030808530_ClinicalCategory.resx">
+      <DependentUpon>202011030808530_ClinicalCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011181247278_cc_feature_is_optional.resx">
+      <DependentUpon>202011181247278_cc_feature_is_optional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011210320596_WorkFlow.resx">
+      <DependentUpon>202011210320596_WorkFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011231003000_WorkFlow_ObjId.resx">
+      <DependentUpon>202011231003000_WorkFlow_ObjId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011240841556_WorkFlow_ValidationToken.resx">
+      <DependentUpon>202011240841556_WorkFlow_ValidationToken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011251323108_WorkFlowItem_ParentId_ParentType.resx">
+      <DependentUpon>202011251323108_WorkFlowItem_ParentId_ParentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101100520001_UniqueID.resx">
+      <DependentUpon>202101100520001_UniqueID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

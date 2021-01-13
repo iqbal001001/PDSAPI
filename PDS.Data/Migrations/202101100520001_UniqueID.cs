@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class uniqueId : DbMigration
+    public partial class UniqueID : DbMigration
     {
         public override void Up()
         {

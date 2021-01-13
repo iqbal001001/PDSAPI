@@ -18,6 +18,7 @@ namespace PDS.API.Extension
         public static void ToDto(this IData data, IDataDto dataDto = null)
         {
             dataDto.Id = data.Id;
+            dataDto.UniqueId = data.UniqueId;
             dataDto.UpdatedBy = data.UpdatedBy;
             dataDto.UpdatedOn = data.UpdatedOn;
             dataDto.CreatedBy = data.CreatedBy;
@@ -26,6 +27,7 @@ namespace PDS.API.Extension
         public static IData ToDomain(this IDataDto dataDto, IData data)
         {
             data.Id = dataDto.Id;
+            data.UniqueId = dataDto.UniqueId;
             data.UpdatedBy = dataDto.UpdatedBy;
             data.UpdatedOn = dataDto.UpdatedOn;
             data.CreatedBy = dataDto.CreatedBy;

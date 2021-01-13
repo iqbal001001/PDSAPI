@@ -8,7 +8,7 @@
         public override void Up()
         {
             AddColumn("dbo.WorkFlowItem", "ParentId", c => c.Int(nullable: false));
-            AddColumn("dbo.WorkFlowItem", "ParentType", c => c.String(maxLength: 1000));
+            AddColumn("dbo.WorkFlowItem", "ParentType", c => c.String());
         }
         
         public override void Down()
